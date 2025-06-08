@@ -6,7 +6,8 @@ authors = [
     { name = "Christian Steinmetz" },
     { email = "c.j.steinmetz@qmul.ac.uk" },
 ]
-dependencies = ["torch", "numpy"]
+# TODO: Make scipy optional. Currently doesn't catch failed import.
+dependencies = ["torch", "numpy", "scipy"]
 dynamic = ["readme", "license", "requires-python", "classifiers"]
 
 [build-system]
@@ -15,4 +16,4 @@ requires = ["setuptools", "wheel", "attrs"]
 build-backend = "setuptools.build_meta"
 
 [project.optional-dependencies]
-all = ["matplotlib", "librosa", "scipy", "scipy"]
+all = ["matplotlib", "librosa"]
